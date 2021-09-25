@@ -1,9 +1,11 @@
 import React from 'react';
 
+import Section from 'containers/HomePage/Section/Loadable'
+
 export default function HomePage() {
   return (
-    <h1>
-      Hello World
-    </h1>
+    <React.Fragment>
+        <Section />
+    </React.Fragment>
   );
 }
