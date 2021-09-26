@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components';
-import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 
 const GlobalStyle = createGlobalStyle`
   html,

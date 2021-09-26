@@ -25,10 +25,12 @@ import LanguageProvider from 'containers/LanguageProvider';
 // Load the favicon and the .htaccess file
 /* eslint-disable import/no-unresolved, import/extensions */
 import '!file-loader?name=[name].[ext]!./images/favicon.ico';
-import '!file-loader?name=[name].[ext]!./images/main_background.svg';
-import '!file-loader?name=[name].[ext]!./images/section_background.svg';
+import '!file-loader?name=main_background.svg!./images/main_background.svg';
+import '!file-loader?name=section_background.jpg!./images/section_background.jpg';
 import 'file-loader?name=.htaccess!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import configureStore from './configureStore';
 
