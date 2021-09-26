@@ -20,10 +20,10 @@ const styles = {
     boxShadow: "5px 10px 12px 0px black"
 }
 
-export default function Section() {
-  return (
-    <Container style = {styles}>
-        Hey there.
-    </Container>
-  );
+export default function Section(props) {
+    return (
+        <Container style = {styles}>
+            {props.children}
+        </Container>
+    );
 }
