@@ -1,13 +1,11 @@
 import React from 'react'
 
-const styles = {
-    color: "white"
-}
+import FixedText from 'components/FixedText/Loadable'
 
 function HeroSection () {
     return (
         <React.Fragment>
-          Hello
+          <FixedText />
         </React.Fragment>
     )
 }
