@@ -1,0 +1,11 @@
+#HeaderAnimation__container {
+  position: relative;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 25vw;
+  height: 25vw;
+  margin: 0;
+  padding: 0;
+}
