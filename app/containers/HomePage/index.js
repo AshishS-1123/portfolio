@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Section from 'containers/HomePage/Section/Loadable'
-import HeroSection from 'containers/HomePage/HeroSection/Loadable'
+import Section from 'containers/Section/Loadable'
+import HeroSection from 'containers/HeroSection/Loadable'
 
 export default function HomePage() {
   return (
