@@ -1,11 +1,14 @@
-import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import React from 'react'
+
+import './index.css'
 
 function FixedText() {
-  return <div />;
+  return (
+    <div className='FixedText__container'>
+      Hi, I am
+      <div>Ashish Shevale</div>
+    </div>
+  );
 }
-
-FixedText.propTypes = {};
 
 export default FixedText;

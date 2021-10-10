@@ -1,0 +1,21 @@
+.FixedText__container {
+  font-family: Cairo;
+  font-size: 18px;
+  color: #cfd8dc;
+
+  margin-left: 6.614583vw;
+  margin-top: 3.125vw;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.FixedText__container > div {
+  font-family: KleeBold;
+  font-size: 35px;
+  text-transform: uppercase;
+
+  margin-left: 10px;
+
+}
