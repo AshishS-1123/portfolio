@@ -7,15 +7,20 @@ import arcs from './animatedArcData'
 import "./index.css"
 
 function HeaderAnimation() {
+  // This is a custom hook used for getting screen sizes
   const [width, height] = useWindowSize ()
+
+  // These references are used for changing the text of DOM objects during transitions
   const largeTextRef = useRef (null)
   const smallTextRef = useRef (null)
 
+  // This is the list of all possible role texts to be animated
   const possibleTexts = [
     {large: "FRONT END", small: "Developer"},
     {large: "OPEN SOURCE", small: "Contributor"},
     {large: "REACT JS", small: "Developer"}
   ]
+  // Pointer to currently displayed role text
   let currentText = 0
 
   const svg_animation_data = {
@@ -47,6 +52,7 @@ function HeaderAnimation() {
       return
     }
 
+    // Changing text happens only at 90deg.
     currentText = (currentText + 1) % 3
 
     largeTextRef.current.innerText = possibleTexts[currentText].large
