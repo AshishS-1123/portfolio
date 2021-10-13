@@ -12,6 +12,7 @@ function Arc({ posX, posY, radius,  startAngle, endAngle, viewport, color, strok
       fill="transparent"
       strokeWidth={strokeWidth}
       stroke={color}
+      strokeLinecap="round"
       />
   );
 }
