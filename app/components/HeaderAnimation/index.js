@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { motion } from 'framer-motion'
 
 import Arc from 'components/Arc/Loadable'
@@ -8,13 +8,22 @@ import "./index.css"
 
 function HeaderAnimation() {
   const [width, height] = useWindowSize ()
+  const largeTextRef = useRef (null)
+  const smallTextRef = useRef (null)
+
+  const possibleTexts = [
+    {large: "FRONT END", small: "Developer"},
+    {large: "OPEN SOURCE", small: "Contributor"},
+    {large: "REACT JS", small: "Developer"}
+  ]
+  let currentText = 0
 
   const svg_animation_data = {
     animation: {
       rotate: [90, -90]
     },
     transition: {
-      duration: 4,
+      duration: 3.5,
       yoyo: Infinity,
       ease: "easeInOut"
     },
@@ -33,6 +42,17 @@ function HeaderAnimation() {
     }
   }
 
+  const handleAnimationUpdate = (latestValue) => {
+    if (latestValue.rotate != -90) {
+      return
+    }
+
+    currentText = (currentText + 1) % 3
+
+    largeTextRef.current.innerText = possibleTexts[currentText].large
+    smallTextRef.current.innerText = possibleTexts[currentText].small
+  }
+
   return (
     <div id="HeaderAnimation__container">
       <div id="HeaderAnimation__svgcontainer">
@@ -44,6 +64,7 @@ function HeaderAnimation() {
           animate={svg_animation_data.animation}
           transition={svg_animation_data.transition}
           style={svg_animation_data.style}
+          onUpdate={handleAnimationUpdate}
         >
         {
           arcs.map (arc => {
@@ -68,10 +89,12 @@ function HeaderAnimation() {
         <hr />
         <div id="HeaderAnimation__smalltext">Hi, I'm Ashish. I am a</div>
         <motion.div
+          ref={largeTextRef}
           animate={text_animation_data.animation}
           transition={text_animation_data.transition}
           id="HeaderAnimation__largetext">FRONT END</motion.div>
         <motion.div
+          ref={smallTextRef}
           animate={text_animation_data.animation}
           transition={text_animation_data.transition}
           id="HeaderAnimation__mediumtext">Developer</motion.div><br />

@@ -16,6 +16,8 @@
 }
 
 #HeaderAnimation__text {
+  width: 22vw;
+  backgrodund: red;
   color: #eee;
 
   position: absolute;
@@ -41,5 +43,5 @@
 
 #HeaderAnimation__largetext {
   font-family: Acme;
-  font-size: 79px;
+  font-size: 65px;
 }
