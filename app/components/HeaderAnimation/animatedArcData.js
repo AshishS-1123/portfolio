@@ -41,7 +41,7 @@ const arcs = [
     radius: 0.1,
     startAngle: 150,
     endAngle: 210,
-    color: "#eb1a8377",
+    color: "#8d1b61",
     strokeWidth: "8"
   },
   /* Pink Upper Semitransparent Ring */
@@ -85,7 +85,7 @@ const arcs = [
     id: 10,
     radius: 0.12,
     startAngle: 105,
-    endAngle: 108.5,
+    endAngle: 105.5,
     color: "#ca1de4",
     strokeWidth: "12"
   },
@@ -94,7 +94,7 @@ const arcs = [
     id: 11,
     radius: 0.12,
     startAngle: 100,
-    endAngle: 103.5,
+    endAngle: 100.5,
     color: "#ca1de4",
     strokeWidth: "12"
   },
@@ -102,7 +102,7 @@ const arcs = [
   {
     id: 12,
     radius: 0.12,
-    startAngle: 288.5,
+    startAngle: 284.5,
     endAngle: 285,
     color: "#ca1de4",
     strokeWidth: "12"
@@ -111,8 +111,8 @@ const arcs = [
   {
     id: 13,
     radius: 0.12,
-    startAngle: 283.5,
-    endAngle: 280,
+    startAngle: 280,
+    endAngle: 280.5,
     color: "#ca1de4",
     strokeWidth: "12"
   }
