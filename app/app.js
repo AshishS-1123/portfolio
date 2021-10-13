@@ -13,8 +13,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import history from 'utils/history';
-import 'sanitize.css/sanitize.css';
+import history from 'utils/history'
 
 // Import root app
 import App from 'containers/App';
@@ -29,6 +28,12 @@ import '!file-loader?name=[name].[ext]!./images/favicon.ico';
 // Import all the images
 import '!file-loader?name=main_background.svg!./images/main_background.svg';
 import '!file-loader?name=section_background.jpg!./images/section_background.jpg';
+
+// Import Icons
+import '!file-loader?name=email.png!./icons/email.png'
+import '!file-loader?name=github.png!./icons/github.png'
+import '!file-loader?name=linkedin.png!./icons/linkedin.png'
+import '!file-loader?name=phone.png!./icons/phone-call.png'
 
 // Import all the fonts
 import '!file-loader?name=Acme.ttf!./fonts/Acme.ttf'
