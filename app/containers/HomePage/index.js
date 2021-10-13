@@ -1,14 +1,14 @@
 import React from 'react';
 
-import Section from 'containers/Section/Loadable'
-import HeroSection from 'containers/HeroSection/Loadable'
+import createSection from 'containers/Section'
+import HeroSection from 'containers/HeroSection'
 
 export default function HomePage() {
+  const HeroSectionWrapped = createSection(HeroSection)
+
   return (
     <React.Fragment>
-        <Section>
-            <HeroSection />
-        </Section>
+      <HeroSectionWrapped />
     </React.Fragment>
   );
 }
