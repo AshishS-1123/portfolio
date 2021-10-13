@@ -9,20 +9,28 @@ import "./index.css"
 function HeaderAnimation() {
   const [width, height] = useWindowSize ()
 
-  const animation = {
-    rotate: [1440, -1440]
+  const svg_animation_data = {
+    animation: {
+      rotate: [90, -90]
+    },
+    transition: {
+      duration: 4,
+      yoyo: Infinity,
+      ease: "easeInOut"
+    },
+    style: {
+      originX: "50%",
+      originY: "50%",
+    }
   }
 
-  const transition = {
-    duration: 5,
-    yoyo: Infinity,
-    ease: "circIn"
-  }
-
-  const style = {
-    originX: "50%",
-    originY: "50%",
-    animationTimingFunction: "linear"
+  const text_animation_data = {
+    animation: {
+      opacity: [1, 1, 1, 0, 0]
+    },
+    transition: {
+      ...svg_animation_data.transition
+    }
   }
 
   return (
@@ -33,9 +41,9 @@ function HeaderAnimation() {
           xlink="http://www.w3.org/1999/xlink"
           width="35vw"
           height="35vw"
-          animate={animation}
-          transition={transition}
-          style={style}
+          animate={svg_animation_data.animation}
+          transition={svg_animation_data.transition}
+          style={svg_animation_data.style}
         >
         {
           arcs.map (arc => {
@@ -59,8 +67,14 @@ function HeaderAnimation() {
       <div id="HeaderAnimation__text">
         <hr />
         <div id="HeaderAnimation__smalltext">Hi, I'm Ashish. I am a</div>
-        <div id="HeaderAnimation__largetext">FRONT END</div>
-        <div id="HeaderAnimation__mediumtext">Developer</div><br />
+        <motion.div
+          animate={text_animation_data.animation}
+          transition={text_animation_data.transition}
+          id="HeaderAnimation__largetext">FRONT END</motion.div>
+        <motion.div
+          animate={text_animation_data.animation}
+          transition={text_animation_data.transition}
+          id="HeaderAnimation__mediumtext">Developer</motion.div><br />
         <hr />
       </div>
     </div>
