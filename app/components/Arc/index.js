@@ -31,7 +31,7 @@ function Arc({ posX, posY, radius,  startAngle, endAngle, viewport, color, strok
     </React.Fragment>
   );
 }
-
+// transform="rotate(-90, 387.84, 387.84)"
 Arc.propTypes = {
   posX: PropTypes.number.isRequired,
   posY: PropTypes.number.isRequired,
