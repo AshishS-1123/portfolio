@@ -25,7 +25,7 @@ function HeaderAnimation() {
 
   const svg_animation_data = {
     animation: {
-      rotate: [90, -90]
+      // rotate: [90, -90]
     },
     transition: {
       duration: 3.5,
@@ -40,7 +40,7 @@ function HeaderAnimation() {
 
   const text_animation_data = {
     animation: {
-      opacity: [1, 1, 1, 0, 0]
+      // opacity: [1, 1, 1, 0, 0]
     },
     transition: {
       ...svg_animation_data.transition

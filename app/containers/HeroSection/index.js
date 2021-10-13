@@ -1,12 +1,13 @@
 import React from 'react'
 
-import FixedText from 'components/FixedText/Loadable'
+import IconContainer from 'components/IconContainer/Loadable'
 import HeaderAnimation from 'components/HeaderAnimation/Loadable'
 
 function HeroSection () {
     return (
         <React.Fragment>
           <HeaderAnimation />
+          <IconContainer />
         </React.Fragment>
     )
 }

@@ -1,0 +1,18 @@
+#IconContainer__container {
+  width: auto;
+  background: reds;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 20px; left: 50%;
+  transform: translateX(-50%);
+}
+
+#IconContainer__container * {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+}
