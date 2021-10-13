@@ -6,7 +6,6 @@ import HeaderAnimation from 'components/HeaderAnimation/Loadable'
 function HeroSection () {
     return (
         <React.Fragment>
-          <FixedText />
           <HeaderAnimation />
         </React.Fragment>
     )

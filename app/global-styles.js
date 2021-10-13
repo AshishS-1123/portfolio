@@ -18,6 +18,10 @@ const GlobalStyle = createGlobalStyle`
     src: url("/KleeBold.ttf")format("truetype");
   }
 
+  * {
+    box-sizing: border-box;
+  }
+
   html,
   body {
     height: 100%;

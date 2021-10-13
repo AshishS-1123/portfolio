@@ -1,11 +1,39 @@
 #HeaderAnimation__container {
+  width: 40.4vw;
+  height: 40.4vw;
+
   position: relative;
-  top: 35%;
   left: 50%;
+  transform: translateX(-50%);
+}
+
+#HeaderAnimation__text {
+  color: #eee;
+
+  position: absolute;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
 
-  width: 25vw;
-  height: 25vw;
-  margin: 0;
-  padding: 0;
+  text-align: center;
+  line-height: normal !important;
+
+  text-transform: capitalize;
+  font-family: KleeRegular;
+
+  padding-bottom: 15px;
+}
+
+#HeaderAnimation__smalltext {
+  font-size: 30px;
+}
+
+#HeaderAnimation__mediumtext {
+  font-size: 50px;
+  text-transform: uppercase;
+  line-height: 0.8 !important;
+}
+
+#HeaderAnimation__largetext {
+  font-family: Acme;
+  font-size: 79px;
 }

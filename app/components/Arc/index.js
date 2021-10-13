@@ -13,7 +13,7 @@ function Arc({ posX, posY, radius,  startAngle, endAngle, viewport, color, strok
         <feGaussianBlur stdDeviation="12" />
       </filter>
       <motion.path
-        d={getPathData (posX * viewport, posX * viewport, radius * viewport, startAngle, endAngle)}
+        d={getPathData (posX * viewport, posX * viewport, radius * viewport * 1.3, startAngle, endAngle)}
         fill="transparent"
         strokeWidth={strokeWidth}
         stroke={color}
@@ -22,7 +22,7 @@ function Arc({ posX, posY, radius,  startAngle, endAngle, viewport, color, strok
         className="filter"
       />
       <motion.path
-        d={getPathData (posX * viewport, posX * viewport, radius * viewport, startAngle, endAngle)}
+        d={getPathData (posX * viewport, posX * viewport, radius * viewport * 1.3, startAngle, endAngle)}
         fill="transparent"
         strokeWidth={strokeWidth}
         stroke={color}
