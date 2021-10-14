@@ -14,7 +14,7 @@ const styles = {
     margin: "11.6204vh auto 11.6204vh auto",
 
     borderRadius: "8px",
-    boxShadow: "5px 10px 12px 0px black"
+    boxShadow: "5px 10px 19px 0px black"
 }
 
 export default function createSection(Component) {
