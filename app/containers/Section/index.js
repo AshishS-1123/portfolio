@@ -11,10 +11,7 @@ const styles = {
     width: "75.1041vw",
     height: "76.7592vh",
 
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
+    margin: "11.6204vh auto 11.6204vh auto",
 
     borderRadius: "8px",
     boxShadow: "5px 10px 12px 0px black"
