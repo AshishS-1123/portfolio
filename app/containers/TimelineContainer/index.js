@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function TimelineComponent() {
+function TimelineContainer() {
   const container_style = {
     background: "#161616",
     width: "60vw",
@@ -20,4 +20,4 @@ function TimelineComponent() {
 
 TimelineComponent.propTypes = {};
 
-export default TimelineComponent;
+export default TimelineContainer
