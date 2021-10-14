@@ -1,21 +1,33 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import './index.css'
 
-function YearInfoHolder() {
+function YearInfoHolder({ yearMeta, yearInfo }) {
   return (
     <div id="YearInfoHolder__container">
-      <h4>10th standard</h4>
+      <h4>{yearMeta}</h4>
       <p>
-        - Lorem ipsum dolor sit amet,
-        <br />- consectetur adipisicing elit.
-        <br />- Ratione consequuntur itaque eveniet sit
-        <br />- vero aliquam molestiae dolore,
-        <br />- voluptatum quasi ipsum laudantium voluptate enim
-        <br />- dolorem soluta eaque in
+        {
+          yearInfo.map(sentence => {
+            return (
+              <p>{sentence}</p>
+            )
+          })
+        }
       </p>
     </div>
   )
+}
+
+YearInfoHolder.propTypes = {
+  yearMeta: PropTypes.string.isRequired,
+  yearInfo: PropTypes.string.isRequired
+}
+
+YearInfoHolder.defaultProps = {
+  yearMeta: "10th standard",
+  yearInfo: "Whoops! Looks like the data din't load correctly"
 }
 
 export default YearInfoHolder;

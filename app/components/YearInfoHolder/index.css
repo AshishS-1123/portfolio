@@ -8,10 +8,13 @@
 
 #YearInfoHolder__container > h4 {
   font-size: 40px;
-  margin: 5vw auto;
+  margin: 3.5vw 1vw;
 }
 
 #YearInfoHolder__container > p {
-  font-size: 23px;
+  font-size: 18px;
   color: #aaa;
+
+  padding-right: 4vw;
+  padding-left: 1vw;
 }

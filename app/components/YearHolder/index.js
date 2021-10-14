@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import './index.css'
 
-function YearHolder() {
+function YearHolder({ year }) {
   return (
     <div id="YearHolder__container">
       <div>
@@ -11,7 +11,7 @@ function YearHolder() {
           <div>
             <div>
               <span id="year_text">THE YEAR WAS</span>
-              <span id="year_no">2016</span>
+              <span id="year_no">{year}</span>
               <span id="year_decoration">
                 <hr />&nbsp; &#9733; &nbsp;<hr />
               </span>
@@ -23,6 +23,12 @@ function YearHolder() {
   )
 }
 
-YearHolder.propTypes = {};
+YearHolder.propTypes = {
+  year: PropTypes.number.isRequired
+}
 
-export default YearHolder;
+YearHolder.defaultProps = {
+  year: 2016
+}
+
+export default YearHolder
