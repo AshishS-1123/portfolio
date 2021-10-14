@@ -1,6 +1,7 @@
 #YearHolder__container {
   width: 30.46875vw;
   height: 30.46875vw;
+  float: left;
 
   position: relative;
   top: 50%; left: 2.5%;

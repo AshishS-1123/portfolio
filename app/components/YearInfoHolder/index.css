@@ -1,0 +1,17 @@
+#YearInfoHolder__container {
+  width: 27vw;
+  float: right;
+
+  text-align: justify;
+  font-family: KleeBold;
+}
+
+#YearInfoHolder__container > h4 {
+  font-size: 40px;
+  margin: 5vw auto;
+}
+
+#YearInfoHolder__container > p {
+  font-size: 23px;
+  color: #aaa;
+}
