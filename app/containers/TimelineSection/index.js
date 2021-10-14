@@ -1,10 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import TimelineContainer from 'containers/TimelineContainer/'
-import YearHolder from 'components/YearHolder/Loadable'
-import YearInfoHolder from 'components/YearInfoHolder/Loadable'
-import NavArrows from 'components/NavArrows/Loadable'
+import TimelineContainer from 'containers/TimelineContainer/Loadable'
 
 export function TimelineSection() {
   return (

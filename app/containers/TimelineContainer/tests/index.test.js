@@ -10,12 +10,12 @@ import React from 'react';
 import { render } from 'react-testing-library';
 // import 'jest-dom/extend-expect'; // add some helpful assertions
 
-import TimelineComponent from '../index';
+import TimelineContainer from '../index';
 
-describe('<TimelineComponent />', () => {
+describe('<TimelineContainer />', () => {
   it('Expect to not log errors in console', () => {
     const spy = jest.spyOn(global.console, 'error');
-    render(<TimelineComponent />);
+    render(<TimelineContainer />);
     expect(spy).not.toHaveBeenCalled();
   });
 
@@ -31,7 +31,7 @@ describe('<TimelineComponent />', () => {
   it.skip('Should render and match the snapshot', () => {
     const {
       container: { firstChild },
-    } = render(<TimelineComponent />);
+    } = render(<TimelineContainer />);
     expect(firstChild).toMatchSnapshot();
   });
 });
