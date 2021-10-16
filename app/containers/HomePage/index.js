@@ -5,12 +5,21 @@ import HeroSection from 'containers/HeroSection'
 import TimelineSection from 'containers/TimelineSection'
 
 export default function HomePage() {
-  // const HeroSectionWrapped = createSection(HeroSection)
+  const HeroSectionWrapped = createSection(HeroSection)
   const TimelineSectionWrapped = createSection(TimelineSection)
+
+  const sections = [
+    createSection (HeroSection),
+    createSection (TimelineSection)
+  ]
 
   return (
     <React.Fragment>
-      <TimelineSectionWrapped />
+      {
+        sections.map (Section => {
+          return <Section />
+        })
+      }
     </React.Fragment>
   );
 }
