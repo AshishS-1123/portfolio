@@ -1,13 +1,19 @@
 #NavArrow_left {
-  position: absolute;
-  left: calc((100vw - 75.1041vw) / 2 + 6vw);
-  top: 55%;
-  transform: translate(-50%, -50%);
+  float: left;
 }
 
 #NavArrow_right {
+  float: right;
+}
+
+#NavArrow__container {
+  z-index: 100;
+
   position: absolute;
-  right: calc((100vw - 75.1041vw) / 2 + 2.5vw);
-  top: 55%;
-  transform: translate(-50%, -50%);
+  top: 150vh;
+  left: 50%;
+  transform: translate(-50%,-90%);
+
+  width: 65vw;
+  background: rgba(0, 0, 0, 0)
 }

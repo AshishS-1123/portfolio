@@ -81,12 +81,12 @@ function TimelineContainer() {
 
   return (
     <div style={container_style}>
+      <NavArrows setActiveYear={setActiveYear} activeYear={activeYear}/>
       <YearHolder year={year_data[activeYear].year}/>
       <YearInfoHolder
         yearMeta={year_data[activeYear].meta}
         yearInfo={year_data[activeYear].data}
       />
-    <NavArrows setActiveYear={setActiveYear} activeYear={activeYear}/>
     </div>
   )
 }

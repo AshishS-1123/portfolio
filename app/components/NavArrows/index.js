@@ -15,14 +15,14 @@ function NavArrows({ setActiveYear, activeYear }) {
   }
 
   return (
-    <React.Fragment>
+    <div id="NavArrow__container">
       <span id="NavArrow_left" dataarrowname="LEFT" onClick={handleClick}>
         <img src="/larrow.svg" dataarrowname="LEFT"/>
       </span>
       <span id="NavArrow_right" dataarrowname="RIGHT" onClick={handleClick}>
         <img src="/rarrow.svg" dataarrowname="RIGHT" />
       </span>
-    </React.Fragment>
+    </div>
   )
 }
 
