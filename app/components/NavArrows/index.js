@@ -1,15 +1,20 @@
-/**
- *
- * NavArrows
- *
- */
-
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import PropTypes from 'prop-types'
+
+import "./index.css"
 
 function NavArrows() {
-  return <div />;
+
+  return (
+    <React.Fragment>
+      <span id="NavArrow_left">
+        <img src="/larrow.svg" />
+      </span>
+      <span id="NavArrow_right">
+        <img src="/rarrow.svg" />
+      </span>
+    </React.Fragment>
+  )
 }
 
 NavArrows.propTypes = {};

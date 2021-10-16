@@ -1,0 +1,13 @@
+#NavArrow_left {
+  position: absolute;
+  left: calc((100vw - 75.1041vw) / 2 + 6vw);
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
+
+#NavArrow_right {
+  position: absolute;
+  right: calc((100vw - 75.1041vw) / 2 + 2.5vw);
+  top: 55%;
+  transform: translate(-50%, -50%);
+}
