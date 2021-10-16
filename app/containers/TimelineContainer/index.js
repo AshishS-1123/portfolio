@@ -77,7 +77,7 @@ const container_style = {
 
 function TimelineContainer() {
 
-  const [activeYear, setActiveYear] = useState(5)
+  const [activeYear, setActiveYear] = useState(0)
 
   return (
     <div style={container_style}>
@@ -86,7 +86,7 @@ function TimelineContainer() {
         yearMeta={year_data[activeYear].meta}
         yearInfo={year_data[activeYear].data}
       />
-      <NavArrows />
+    <NavArrows setActiveYear={setActiveYear} activeYear={activeYear}/>
     </div>
   )
 }

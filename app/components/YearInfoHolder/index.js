@@ -7,22 +7,22 @@ function YearInfoHolder({ yearMeta, yearInfo }) {
   return (
     <div id="YearInfoHolder__container">
       <h4>{yearMeta}</h4>
-      <p>
+      <div>
         {
-          yearInfo.map(sentence => {
+          yearInfo.map((sentence, idx) => {
             return (
-              <p>{sentence}</p>
+              <p key={idx}>{sentence}</p>
             )
           })
         }
-      </p>
+      </div>
     </div>
   )
 }
 
 YearInfoHolder.propTypes = {
   yearMeta: PropTypes.string.isRequired,
-  yearInfo: PropTypes.string.isRequired
+  yearInfo: PropTypes.array.isRequired
 }
 
 YearInfoHolder.defaultProps = {
