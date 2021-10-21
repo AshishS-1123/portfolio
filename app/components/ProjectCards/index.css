@@ -1,10 +1,9 @@
 #ProjectCards__container {
-  width: 47vw;
+  width: 45vw;
   height: 510px;
 
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 8% auto;
+
 }
 
 .ProjectCards__card {

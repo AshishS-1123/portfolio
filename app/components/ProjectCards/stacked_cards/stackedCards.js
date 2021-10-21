@@ -4,132 +4,78 @@
 * Author: Juned Chhipa
 */
 
-
-// NEW ADDITIONS THAT CAN BE MADE
-// stack -> all cards on top of each other. when click and drag, the top one goes to bottom, like someone dealing cards(ace,king,quuen)
-// book -> some on left, some on right. when click, the cards rotate like a page has been turned. can only turn one page at time.
-// rack -> cards rotate vertically, like clothes on a rack.
-
-// for book
-// TODO:
-/*
-call:: layout: book
-	   transform-origin: center <- or maybe left for some, right for some
-reCalculateTransformsOnClick needs to transform the cards vertically.
-in click event listener, it dosent matter what was clicked. get only the direction.
-*/
+// This code has been borrowed and adapted a little from
+// github.com/junedchippa/stacked-cards
 
 (function(){
     const bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; }
 
-	// stackedCards is a function. This is the contructor for initialising package
-    window.stackedCards = (function()
-	{
-		// this will set the class member 'defaults'
-        stackedCards.prototype.defaults =
-		{
+    window.stackedCards = (function() {
+        stackedCards.prototype.defaults = {
             layout: 'slide',                     // slide, fanOut
             onClick: undefined,                 // onclick event provided
             transformOrigin: "center",          // css transformOrigin
         };
 
-        function stackedCards(options)
-		{
-            if (options == null)
-			{
+        function stackedCards(options) {
+            if (options == null) {
                 options = {};
             }
-			// draw and config are methods that will be shared by all instances of stackedCards object.
-			// draw method is defined below
+
             this.draw = bind(this.draw, this);
-			// extend method is defined below.
-			// extend method copies those values of defaults to options that are not present in options
-			// so we are add the default but unspecified properties to options
-			// this.defaults is defined above.
             this.config = this.extend(options, this.defaults);
         }
 
-		// this funciton gets called after creating the stackedCards object
-        stackedCards.prototype.init = function ()
-		{
+        stackedCards.prototype.init = function () {
             const ref = document.readyState
-			// documentElement refers to the whole HTML tag.
             this.element = window.document.documentElement;
-            if (ref === "interactive" || ref === "complete")
-			{
-				// if the document is loaded, then draw everything
+            if (ref === "interactive" || ref === "complete") {
                 this.draw();
-            } else
-			{
-				// othwrwise, wait for it to load, then draw it
+            } else {
                 document.addEventListener('DOMContentLoaded', this.draw);
             }
         }
 
-		// this finctio os called inside init
-        stackedCards.prototype.draw = function ()
-		{
+        stackedCards.prototype.draw = function () {
             var me = this;
 
-			// selector is the tag name that is to be processed
             var selector = this.config.selector;
-			// config.selector is passed as param to constructor.
-			// it is the div element with class .stacked-cards. It contains the group of li tags
 
-			// els is the li tags inside card container element. these appear as colored boxes
             this.els = document.querySelectorAll(selector + " li");
             var els = this.els;
 
-			// the parent is the ul/ol tag that the li tags are present in
             this.parent = els[0].parentNode;
 
-            // Sets height of cards adjusted to the height of the content of the tallest card
-            var getItemHeight = me.getHeight().max;// return of function is object, with max as property. it is height of largest element
+            var getItemHeight = me.getHeight().max;
             els.forEach(item => item.style.height = parseInt(getItemHeight) + "px");
-			// set height of all li tags to the max height???
 
-			// THESE ARE THE INITIAL CONDITIONS
-
-            // to get the active element's position, we will have to know if elements are in even/odd count
             var lenAdjust = (els.length%2==0 ? -2 : -1)
 
-            // oneHalf if the centerPoint - things go left and right from here
             var oneHalf = (els.length+lenAdjust)/2;
-			// when there are odd number of li tags, the middle is at max height.
 
-            var activeTransform = "translate("+ -50 +"%, 0%)  scale(1)"; // css value to place the active elemnt at the center
+            var activeTransform = "translate("+ -50 +"%, 0%)  scale(1)";
 
             this.detectSwipe();
 
 
-            Array.prototype.forEach.call(els, function(el)
-			{
-				// transformOrigin determines the center of rotation of elemnt.
-				// for "slide" it is at center. for "fanout" it is at bottom
+            Array.prototype.forEach.call(els, function(el) {
                 el.style.transformOrigin = me.config.transformOrigin;
 
-				// tells what to do when an element is clicked
-                el.addEventListener("click", function()
-				{
+                el.addEventListener("click", function() {
 
-                    var clickedEl = el; // stores li tag that was pressed
-                    var nextCnt = 0; // stores number of li that come after this
+                    var clickedEl = el;
+                    var nextCnt = 0;
                     var prevCnt = 0;
 
-                    do
-					{
-                        // While there is a next sibling, loop
+                    do {
                         var next = clickedEl.nextElementSibling;
                         nextCnt = nextCnt + 1;
 
                     } while(clickedEl = clickedEl.nextElementSibling);
 
-                    // re-initialize the clickedEl to do the same for prev elements
                     clickedEl = el;
 
-                    do
-					{
-                        // While there is a prev sibling, loop
+                    do {
                         var prev = clickedEl.previousElementSibling;
                         prevCnt = prevCnt + 1;
                     } while(clickedEl = clickedEl.previousElementSibling);
@@ -138,14 +84,13 @@ in click event listener, it dosent matter what was clicked. get only the directi
 
                     me.loopNodeList(els, function(el) {el.classList.remove("active");})
 
-                    el.classList.add("active"); // make the clicked element active
-                    el.classList.add(me.config.layout) // add the layout=slide property
+                    el.classList.add("active");
+                    el.classList.add(me.config.layout)
 
-                    el.style.zIndex = els.length*5; // place this element topmost
+                    el.style.zIndex = els.length*5;
                     el.style.transform = activeTransform;
 
-                    if (me.config.onClick !== undefined)
-					{
+                    if (me.config.onClick !== undefined) {
                          me.config.onClick(el);
                     }
 
@@ -156,25 +101,16 @@ in click event listener, it dosent matter what was clicked. get only the directi
 
         }
 
-
-		//this function returns the heights of all elents
-		// in html, the container has been given a height. then, we are scaling all the li tags.
-		// this causes all element to have diff heights.
         stackedCards.prototype.getHeight = function() {
 
-			// els is node list of all li tags. this function converts the node list to array of node elements
             var els = this.nodelistToArray(this.els);
 
-			// get heights of all li tags and sort them in increasing order
             var elHeights = els.map(item => item.scrollHeight).sort((a, b)=>b-a);
             var maxHeight = elHeights[0];
 
-			// return the list of all heights and the max height
             return { heights: elHeights, max: maxHeight };
         }
 
-		// this function calculates the position, rotation and size of all li elemnet after click.
-		// might need to figure logic for this
         stackedCards.prototype.reCalculateTransformsOnClick = function(nextCnt, prevCnt) {
             var me = this;
             var maxHeight = me.getHeight().max;
@@ -245,10 +181,8 @@ in click event listener, it dosent matter what was clicked. get only the directi
 
                 els[i].style.transform = styleStr;
                 els[i].style.zIndex = z;
-
             }
 
-            // we are going for active element, so make it higher
             z = z - 1;
 
             var j = 0;
@@ -287,12 +221,8 @@ in click event listener, it dosent matter what was clicked. get only the directi
                 els[i].style.transform = styleStr;
                 els[i].style.zIndex = z;
             }
-
-
-
         }
 
-		// this functuion is for mobile devices. triggers click event for respective element when detected swipe
         stackedCards.prototype.detectSwipe = function() {
             var me = this;
             var regionEl = document.querySelector(me.config.selector);
@@ -309,7 +239,6 @@ in click event listener, it dosent matter what was clicked. get only the directi
 
         }
 
-		// this function adds the default object properties to those passed as params and returns it
         stackedCards.prototype.extend = function(custom, defaults) {
             var key, value;
             for (key in defaults) {
@@ -321,7 +250,6 @@ in click event listener, it dosent matter what was clicked. get only the directi
             return custom;
         }
 
-		// converts the list of element node object list to array
         stackedCards.prototype.nodelistToArray = function(nodelist) {
             var results = [];
             var i, element;
@@ -361,9 +289,9 @@ in click event listener, it dosent matter what was clicked. get only the directi
             startY,
             distX,
             distY,
-            threshold = 75, //required min distance traveled to be considered swipe
-            restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-            allowedTime = 300, // maximum time allowed to travel that distance
+            threshold = 75,
+            restraint = 100,
+            allowedTime = 300,
             elapsedTime,
             startTime,
             handleswipe = callback || function(swipedir){}
@@ -374,25 +302,24 @@ in click event listener, it dosent matter what was clicked. get only the directi
                 dist = 0
                 startX = touchobj.pageX
                 startY = touchobj.pageY
-                startTime = new Date().getTime() // record time when finger first makes contact with surface
+                startTime = new Date().getTime()
                 e.preventDefault()
             }, false)
 
             touchsurface.addEventListener('touchmove', function(e){
-               // e.preventDefault() // prevent scrolling when inside DIV
             }, false)
 
             touchsurface.addEventListener('touchend', function(e){
                 var touchobj = e.changedTouches[0]
-                distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
-                distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
-                elapsedTime = new Date().getTime() - startTime // get time elapsed
-                if (elapsedTime <= allowedTime){ // first condition for awipe met
-                    if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){ // 2nd condition for horizontal swipe met
-                        swipedir = (distX < 0)? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
+                distX = touchobj.pageX - startX
+                distY = touchobj.pageY - startY
+                elapsedTime = new Date().getTime() - startTime
+                if (elapsedTime <= allowedTime){
+                    if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint){
+                        swipedir = (distX < 0)? 'left' : 'right'
                     }
-                    else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint){ // 2nd condition for vertical swipe met
-                        swipedir = (distY < 0)? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
+                    else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint){
+                        swipedir = (distY < 0)? 'up' : 'down'
                     }
                 }
                 handleswipe(swipedir)

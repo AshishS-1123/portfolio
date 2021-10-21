@@ -28,7 +28,7 @@ function HeaderAnimation() {
       rotate: [90, -90]
     },
     transition: {
-      duration: 3.5,
+      duration: 2,
       yoyo: Infinity,
       ease: "easeInOut"
     },

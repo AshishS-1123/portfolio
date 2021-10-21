@@ -10,8 +10,8 @@ export default function HomePage() {
   const TimelineSectionWrapped = createSection(TimelineSection)
 
   const sections = [
-    // createSection (HeroSection),
-    // createSection (TimelineSection),
+    createSection (HeroSection),
+    createSection (TimelineSection),
     createSection (ProjectSection)
   ]
 
