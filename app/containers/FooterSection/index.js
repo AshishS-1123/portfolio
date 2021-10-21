@@ -1,31 +1,14 @@
-/**
- *
- * FooterSection
- *
- */
-
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 export function FooterSection() {
-  return <div />;
+  return (
+    <div>
+    footer</div>
+  )
 }
 
 FooterSection.propTypes = {
-  dispatch: PropTypes.func.isRequired,
 };
 
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-  };
-}
-
-const withConnect = connect(
-  null,
-  mapDispatchToProps,
-);
-
-export default compose(withConnect)(FooterSection);
+export default FooterSection

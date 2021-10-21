@@ -1,18 +1,19 @@
 import React from 'react';
 
 import createSection from 'containers/Section'
+
 import HeroSection from 'containers/HeroSection'
 import TimelineSection from 'containers/TimelineSection'
 import ProjectSection from 'containers/ProjectSection'
+import FooterSection from 'containers/FooterSection'
 
 export default function HomePage() {
-  const HeroSectionWrapped = createSection(HeroSection)
-  const TimelineSectionWrapped = createSection(TimelineSection)
 
   const sections = [
-    createSection (HeroSection),
-    createSection (TimelineSection),
-    createSection (ProjectSection)
+    // createSection (HeroSection),
+    // createSection (TimelineSection),
+    // createSection (ProjectSection),
+    createSection (FooterSection)
   ]
 
   return (
