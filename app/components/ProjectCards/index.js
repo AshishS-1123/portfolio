@@ -32,3 +32,12 @@ function ProjectCards() {
 }
 
 export default ProjectCards
+
+/*
+Projects
+
+1. Akira
+2. Chat App
+3. MERN stack authentiction
+4. Clone
+*/

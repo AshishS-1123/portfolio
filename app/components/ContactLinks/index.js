@@ -1,15 +1,31 @@
-/**
- *
- * ContactLinks
- *
- */
-
-import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import React from 'react'
 
 function ContactLinks() {
-  return <div />;
+  return (
+    <div id="ContactLinks__container">
+      <h3>Let's Get In Touch</h3>
+
+      <p>
+        <h5>LinkedIn</h5>
+        <a>linkedin.com/in/ashish-shevale</a>
+      </p>
+
+      <p>
+        <h5>GitHub</h5>
+        <a>github.com/AshishS-1123</a>
+      </p>
+
+      <p>
+        <h5>Email</h5>
+        <a>shevaleashish@gmail.com</a>
+      </p>
+
+      <p>
+        <h5>Phone</h5>
+        <a>+91-9022160734</a>
+      </p>
+    </div>
+  )
 }
 
 ContactLinks.propTypes = {};
