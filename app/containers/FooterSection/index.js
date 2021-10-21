@@ -4,7 +4,8 @@ import PropTypes from 'prop-types'
 export function FooterSection() {
   return (
     <div>
-    footer</div>
+    footer
+    </div>
   )
 }
 
