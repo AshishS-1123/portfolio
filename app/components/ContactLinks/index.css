@@ -1,0 +1,41 @@
+#ContactLinks__container {
+    text-align: center;
+
+    width: 25vw;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#ContactLinks__container > h3 {
+    font-family: Acme;
+    color: #e8e8e8;
+    font-size: 30px;
+}
+
+#ContactLinks__container > hr {
+    border: 0px solid grey;
+    opacity: 1;
+    width: 45%;
+
+    margin: 0 auto;
+    margin-bottom: 5vw;
+}
+
+#ContactLinks__container > p {
+    margin-top: 3vw;
+}
+
+#ContactLinks__container > p > h5 {
+    font-family: Acme;
+    color: #e8e8e8;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+#ContactLinks__container > p > a {
+    font-family: KleeRegular;
+    color: #e8e8e8;
+    font-size: 18px;
+}

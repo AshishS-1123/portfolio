@@ -1,9 +1,11 @@
 import React from 'react'
 
+import "./index.css"
+
 function ContactLinks() {
   return (
     <div id="ContactLinks__container">
-      <h3>Let's Get In Touch</h3>
+      <h3>Let's Get In Touch</h3><hr />
 
       <p>
         <h5>LinkedIn</h5>
