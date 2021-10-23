@@ -6,6 +6,7 @@ import HeroSection from 'containers/HeroSection'
 import TimelineSection from 'containers/TimelineSection'
 import ProjectSection from 'containers/ProjectSection'
 import FooterSection from 'containers/FooterSection'
+import ResumeSection from 'containers/ResumeSection'
 
 export default function HomePage() {
 
@@ -13,7 +14,8 @@ export default function HomePage() {
     // createSection (HeroSection),
     // createSection (TimelineSection),
     // createSection (ProjectSection),
-    createSection (FooterSection)
+    createSection (ResumeSection),
+    // createSection (FooterSection)
   ]
 
   return (

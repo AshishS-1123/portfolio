@@ -1,15 +1,20 @@
-/**
- *
- * Resume
- *
- */
+import React from 'react'
 
-import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import "./index.css"
 
 function Resume() {
-  return <div />;
+  return (
+    <div id="Resume__container">
+      <h5>Here Is My Resume, In Case You Want To See It...</h5>
+
+      <div>
+        <button>
+          <img src="/download.svg" />
+          Download
+        </button>
+      </div>
+    </div>
+  )
 }
 
 Resume.propTypes = {};

@@ -7,12 +7,14 @@ import '!file-loader?name=main_background.svg!./images/main_background.svg';
 import '!file-loader?name=section_background.jpg!./images/section_background.jpg';
 import '!file-loader?name=larrow.svg!./images/larrow.svg'
 import '!file-loader?name=rarrow.svg!./images/rarrow.svg'
+import '!file-loader?name=resume.png!./images/resume.png'
 
 // Import Icons
 import '!file-loader?name=email.png!./icons/email.png'
 import '!file-loader?name=github.png!./icons/github.png'
 import '!file-loader?name=linkedin.png!./icons/linkedin.png'
 import '!file-loader?name=phone.png!./icons/phone-call.png'
+import '!file-loader?name=download.svg!./images/download.svg'
 
 // Import all the fonts
 import '!file-loader?name=Acme.ttf!./fonts/Acme.ttf'

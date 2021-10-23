@@ -11,7 +11,7 @@ const styles = {
     width: "75.1041vw",
     height: "76.7592vh",
 
-    margin: "11.6204vh auto 11.6204vh auto",
+    margin: "11.6204vh auto 13.6204vh auto",
 
     borderRadius: "8px",
     boxShadow: "5px 10px 19px 0px black"
@@ -20,9 +20,9 @@ const styles = {
 export default function createSection(Component) {
     function HOC () {
       return (
-        <Container style={styles}>
+        <div style={styles}>
           <Component />
-        </Container>
+        </div>
       )
     }
 

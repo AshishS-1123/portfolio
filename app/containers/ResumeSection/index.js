@@ -1,31 +1,13 @@
-/**
- *
- * ResumeSection
- *
- */
+import React from 'react'
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { compose } from 'redux';
+import Resume from 'components/Resume/Loadable'
 
-export function ResumeSection() {
-  return <div />;
+function ResumeSection() {
+  return (
+    <React.Fragment>
+      <Resume />
+    </React.Fragment>
+  )
 }
 
-ResumeSection.propTypes = {
-  dispatch: PropTypes.func.isRequired,
-};
-
-function mapDispatchToProps(dispatch) {
-  return {
-    dispatch,
-  };
-}
-
-const withConnect = connect(
-  null,
-  mapDispatchToProps,
-);
-
-export default compose(withConnect)(ResumeSection);
+export default ResumeSection
