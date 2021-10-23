@@ -24,18 +24,18 @@
     margin-bottom: 5vw;
 }
 
-#ContactLinks__container > p {
+#ContactLinks__container > div {
     margin-top: 3vw;
 }
 
-#ContactLinks__container > p > h5 {
+#ContactLinks__container > div > p {
     font-family: Acme;
     color: #e8e8e8;
     font-size: 24px;
     margin-bottom: 0;
 }
 
-#ContactLinks__container > p > a {
+#ContactLinks__container > div > a {
     font-family: KleeRegular;
     color: #e8e8e8;
     font-size: 18px;

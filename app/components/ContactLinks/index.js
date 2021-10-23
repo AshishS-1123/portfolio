@@ -1,5 +1,6 @@
 import React from 'react'
 
+import ContactForm from 'components/ContactForm/Loadable'
 import "./index.css"
 
 function ContactLinks() {
@@ -7,25 +8,25 @@ function ContactLinks() {
     <div id="ContactLinks__container">
       <h3>Let's Get In Touch</h3><hr />
 
-      <p>
+      <div>
         <h5>LinkedIn</h5>
         <a>linkedin.com/in/ashish-shevale</a>
-      </p>
+      </div>
 
-      <p>
+      <div>
         <h5>GitHub</h5>
         <a>github.com/AshishS-1123</a>
-      </p>
+      </div>
 
-      <p>
+      <div>
         <h5>Email</h5>
         <a>shevaleashish@gmail.com</a>
-      </p>
+      </div>
 
-      <p>
+      <div>
         <h5>Phone</h5>
         <a>+91-9022160734</a>
-      </p>
+      </div>
     </div>
   )
 }

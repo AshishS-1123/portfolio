@@ -1,0 +1,54 @@
+#ContactForm__form {
+  color: black;
+  opacity: 0.75;
+  font-family: KleeRegular;
+  font-size: 15px;
+
+  padding: 5%;
+}
+
+#ContactForm__form > p {
+  margin-bottom: 2%;
+}
+
+#ContactForm__form > input[type="text"] {
+  width: 90%;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid #000000aa;
+  margin-left: 20px;
+  margin-bottom: 3%;
+}
+
+#ContactForm__form > input[type="text"]:nth-of-type(1) {
+  width: 60%;
+}
+
+#ContactForm__form > input[type="text"]:focus {
+  outline: none;
+}
+
+#ContactForm__form > textarea {
+  outline: none;
+  border: 1px solid rgba(0,0,0,0.4);
+
+  width: 95%;
+  height: 300px;
+}
+
+#ContactForm__form > button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 5%;
+
+  width: 40%;
+  height: 40px;
+  font-family: Acme;
+  font-size: 20px;
+  color: white;
+  opacity: 1;
+
+  background: black;
+  border: none;
+  border-radius: 20px;
+}

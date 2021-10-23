@@ -1,17 +1,26 @@
-/**
- *
- * ContactForm
- *
- */
+import React from 'react'
 
-import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
+import "./index.css"
 
 function ContactForm() {
-  return <div />;
+  return (
+    <form id="ContactForm__form" xmlns="http://www.w3.org/1999/xhtml">
+      <p>To,<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;Ashish Shevale.
+      </p>
+
+      <p>From,<br /></p>
+      <input type="text" />
+
+      <p>Subject: <br /></p>
+      <input type="text" />
+
+      <p>Dear Ashish,</p>
+      <textarea />
+
+      <button type="submit">SEND</button>
+    </form>
+  )
 }
 
-ContactForm.propTypes = {};
-
-export default ContactForm;
+export default ContactForm
