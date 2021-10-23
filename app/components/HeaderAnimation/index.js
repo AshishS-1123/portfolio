@@ -65,8 +65,8 @@ function HeaderAnimation() {
         <motion.svg
           xmlns="http://www.w3.org/2000/svg"
           xlink="http://www.w3.org/1999/xlink"
-          width="35vw"
-          height="35vw"
+          width="672px"
+          height="672px"
           animate={svg_animation_data.animation}
           transition={svg_animation_data.transition}
           style={svg_animation_data.style}
@@ -82,7 +82,6 @@ function HeaderAnimation() {
                 radius={arc.radius}
                 startAngle={arc.startAngle}
                 endAngle={arc.endAngle}
-                viewport={width}
                 color={arc.color}
                 strokeWidth={arc.strokeWidth}
               />)

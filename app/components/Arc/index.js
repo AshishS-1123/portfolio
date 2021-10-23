@@ -5,8 +5,10 @@ import { motion } from 'framer-motion'
 import { getPathData, viewportToPixels } from 'utils/geometry'
 import "./index.css"
 
-function Arc({ posX, posY, radius,  startAngle, endAngle, viewport, color, strokeWidth }) {
+function Arc({ posX, posY, radius,  startAngle, endAngle, color, strokeWidth }) {
 
+  const viewport = 1920
+  
   return (
     <React.Fragment>
       <filter id="dropshadow" x="-2" y="-2" width="12vw" height="12vw">

@@ -8,8 +8,9 @@ const styles = {
     backgroundSize: '100% 100%',
     backgroundPosition: 'left top',
 
-    width: "75.1041vw",
+    width: "100%",
     height: "76.7592vh",
+    maxWidth: "1441px",
 
     margin: "11.6204vh auto 13.6204vh auto",
 

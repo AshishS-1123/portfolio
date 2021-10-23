@@ -1,6 +1,6 @@
 #HeaderAnimation__container {
-  width: 35vw;
-  height: 35vw;
+  width: 672px;/*35vw;*/
+  height: 672px;/*35vw;*/
 
   position: relative;
   left: 50%; top: 45%;
@@ -16,8 +16,7 @@
 }
 
 #HeaderAnimation__text {
-  width: 22vw;
-  backgrodund: red;
+  width: 400px;
   color: #eee;
 
   position: absolute;
@@ -43,5 +42,5 @@
 
 #HeaderAnimation__largetext {
   font-family: Acme;
-  font-size: 70px;
+  font-size: clamp(50px, 65px, 70px);
 }
