@@ -10,9 +10,9 @@ import FooterSection from 'containers/FooterSection'
 export default function HomePage() {
 
   const sections = [
-    createSection (HeroSection),
-    createSection (TimelineSection),
-    createSection (ProjectSection),
+    // createSection (HeroSection),
+    // createSection (TimelineSection),
+    // createSection (ProjectSection),
     createSection (FooterSection)
   ]
 
