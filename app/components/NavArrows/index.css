@@ -14,6 +14,7 @@
   left: 50%;
   transform: translate(-50%,-90%);
 
-  width: 65vw;
+  width: 98vw;
+  max-width: 1248px;
   background: rgba(0, 0, 0, 0)
 }

@@ -1,5 +1,5 @@
 #YearInfoHolder__container {
-  width: 27vw;
+  width: 45%;
   float: right;
 
   text-align: justify;
@@ -9,6 +9,7 @@
 #YearInfoHolder__container > h4 {
   font-size: 40px;
   margin: 3.5vw 1vw;
+  margin-bottom: 15%;
 }
 
 #YearInfoHolder__container p {

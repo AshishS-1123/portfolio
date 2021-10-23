@@ -68,7 +68,8 @@ const year_data = [
 
 const container_style = {
   background: "#16161655",
-  width: "60vw",
+  width: "95%",
+  maxWidth: "1152px",
   height: "63vh",
   margin: "2vw auto",
   borderRadius: "8px",

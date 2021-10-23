@@ -12,7 +12,7 @@ export default function HomePage() {
 
   const sections = [
     createSection (HeroSection),
-    // createSection (TimelineSection),
+    createSection (TimelineSection),
     // createSection (ProjectSection),
     // createSection (ResumeSection),
     // createSection (FooterSection)

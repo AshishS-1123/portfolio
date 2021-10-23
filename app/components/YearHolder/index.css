@@ -1,6 +1,6 @@
 #YearHolder__container {
-  width: 30.46875vw;
-  height: 30.46875vw;
+  width: 50%;
+  aspect-ratio: 1/1;
   float: left;
 
   position: relative;
@@ -20,25 +20,22 @@
 }
 
 #YearHolder__container > div {
-  width: 30.46875vw;
-  height: 30.46875vw;
+  width: 100%; height: 100%;
 }
 
 #YearHolder__container > div > div {
-  width: 25.2604vw;
-  height: 25.2604vw;
+  width: 78%; height: 78%;
 }
 
 #YearHolder__container > div > div > div {
-  width: 20.0520vw;
-  height: 20.0520vw;
+  width: 78%; height: 78%;
 }
 
 #YearHolder__container > div > div > div > div {
   border-radius: 0;
   box-shadow: none;
 
-  width: 18vw;
+  width: 90%;
 
   display: flex;
   flex-direction: column;
