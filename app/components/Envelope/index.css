@@ -1,0 +1,12 @@
+#Envelope__container > svg {
+  width: auto;
+  height: 50vw;
+}
+
+#Envelope__container {
+  float: right;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
