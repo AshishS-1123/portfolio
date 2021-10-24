@@ -25,7 +25,7 @@ function HeaderAnimation() {
 
   const svg_animation_data = {
     animation: {
-      // rotate: [90, -90]
+      rotate: [90, -90]
     },
     transition: {
       duration: 2,
