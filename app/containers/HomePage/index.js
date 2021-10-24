@@ -14,7 +14,7 @@ export default function HomePage() {
     createSection (HeroSection),
     createSection (TimelineSection),
     createSection (ProjectSection),
-    // createSection (ResumeSection),
+    createSection (ResumeSection),
     // createSection (FooterSection)
   ]
 
