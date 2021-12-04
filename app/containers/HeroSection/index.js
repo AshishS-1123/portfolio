@@ -1,15 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import IconContainer from 'components/IconContainer/Loadable'
-import HeaderAnimation from 'components/HeaderAnimation/Loadable'
-
-function HeroSection () {
-    return (
-        <React.Fragment>
-          <HeaderAnimation />
-          <IconContainer />
-        </React.Fragment>
-    )
+function HeroSection() {
+  return <React.Fragment>Hero Section</React.Fragment>;
 }
 
-export default HeroSection
+export default HeroSection;

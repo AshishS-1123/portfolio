@@ -1,21 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 
-import { getPathData, viewportToPixels } from 'utils/geometry'
-import "./index.css"
+import { getPathData } from 'utils/geometry';
+import './index.css';
 
-function Arc({ posX, posY, radius,  startAngle, endAngle, color, strokeWidth }) {
+function Arc({ posX, radius, startAngle, endAngle, color, strokeWidth }) {
+  const viewport = 1920;
 
-  const viewport = 1920
-  
   return (
     <React.Fragment>
       <filter id="dropshadow" x="-2" y="-2" width="12vw" height="12vw">
         <feGaussianBlur stdDeviation="12" />
       </filter>
       <motion.path
-        d={getPathData (posX * viewport, posX * viewport, radius * viewport * 1.3, startAngle, endAngle)}
+        d={getPathData(
+          posX * viewport,
+          posX * viewport,
+          radius * viewport * 1.3,
+          startAngle,
+          endAngle,
+        )}
         fill="transparent"
         strokeWidth={strokeWidth}
         stroke={color}
@@ -24,7 +29,12 @@ function Arc({ posX, posY, radius,  startAngle, endAngle, color, strokeWidth }) 
         className="filter"
       />
       <motion.path
-        d={getPathData (posX * viewport, posX * viewport, radius * viewport * 1.3, startAngle, endAngle)}
+        d={getPathData(
+          posX * viewport,
+          posX * viewport,
+          radius * viewport * 1.3,
+          startAngle, endAngle,
+        )}
         fill="transparent"
         strokeWidth={strokeWidth}
         stroke={color}
@@ -36,13 +46,11 @@ function Arc({ posX, posY, radius,  startAngle, endAngle, color, strokeWidth }) 
 // transform="rotate(-90, 387.84, 387.84)"
 Arc.propTypes = {
   posX: PropTypes.number.isRequired,
-  posY: PropTypes.number.isRequired,
   radius: PropTypes.number.isRequired,
   startAngle: PropTypes.number.isRequired,
   endAngle: PropTypes.number.isRequired,
-  viewport: PropTypes.number.isRequired,
   color: PropTypes.string.isRequired,
-  strokeWidth: PropTypes.string.isRequired
+  strokeWidth: PropTypes.string.isRequired,
 };
 
 export default Arc;

@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+// import PropTypes from 'prop-types'
 
-import ContactLinks from 'components/ContactLinks/Loadable'
-import Envelope from 'components/Envelope/Loadable'
+import ContactLinks from 'components/ContactLinks/Loadable';
+import Envelope from 'components/Envelope/Loadable';
 
 export function FooterSection() {
   return (
@@ -10,10 +10,9 @@ export function FooterSection() {
       <ContactLinks />
       <Envelope />
     </React.Fragment>
-  )
+  );
 }
 
-FooterSection.propTypes = {
-};
+FooterSection.propTypes = {};
 
-export default FooterSection
+export default FooterSection;

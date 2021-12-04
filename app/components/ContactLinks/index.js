@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-import ContactForm from 'components/ContactForm/Loadable'
-import "./index.css"
+import './index.css';
 
 function ContactLinks() {
   return (
     <div id="ContactLinks__container">
-      <h3>Let's Get In Touch</h3><hr />
+      <h3>Let's Get In Touch</h3>
+      <hr />
 
       <div>
         <h5>LinkedIn</h5>
