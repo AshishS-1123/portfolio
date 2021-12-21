@@ -1,17 +1,17 @@
-import React, { memo, useEffect } from 'react'
-import PropTypes from 'prop-types'
+import React, { memo, useEffect } from 'react';
+// import PropTypes from 'prop-types'
 
-import stackedCards from './stacked_cards/stackedCards'
+import stackedCards from './stacked_cards/stackedCards';
 
-import './index.css'
+import './index.css';
 
 function ProjectCards() {
   useEffect(() => {
-        		var stackedCardFanOut = new stackedCards({
-    		 	selector: '.stacked-cards-slide',
-    		 	layout: "slide",
-    		 	transformOrigin: "center",
-    		 });
+    const stackedCardFanOut = new stackedCards({
+    selector: '.stacked-cards-slide',
+    layout: "slide",
+    transformOrigin: "center",
+    });
 
     		stackedCardFanOut.init();
   }, [])
@@ -31,7 +31,7 @@ function ProjectCards() {
   )
 }
 
-export default ProjectCards
+export default memo(ProjectCards);
 
 /*
 Projects

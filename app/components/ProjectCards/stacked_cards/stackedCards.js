@@ -7,7 +7,7 @@
 // This code has been borrowed and adapted a little from
 // github.com/junedchippa/stacked-cards
 
-(function(){
+(function () {
     const bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; }
 
     window.stackedCards = (function() {
