@@ -17,16 +17,14 @@ function ProjectCards() {
   }, [])
 
   return (
-    <div id="ProjectCards__container">
-        <div className="stacked-cards stacked-cards-slide">
+    <div className="container-fixed stacked-cards stacked-cards-slide">
           <ul>
             <li className="ProjectCards__card"></li>
             <li className="ProjectCards__card"></li>
             <li className="ProjectCards__card"></li>
             <li className="ProjectCards__card"></li>
             <li className="ProjectCards__card"></li>
-          </ul>
-        </div>
+      </ul>
     </div>
   )
 }

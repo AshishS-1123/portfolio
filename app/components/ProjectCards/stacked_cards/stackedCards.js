@@ -47,7 +47,10 @@
             this.parent = els[0].parentNode;
 
             var getItemHeight = me.getHeight().max;
-            els.forEach(item => item.style.height = parseInt(getItemHeight) + "px");
+            els.forEach(item => {
+                item.style.height = "60vh";
+                item.style.width = "30vw";
+            });
 
             var lenAdjust = (els.length%2==0 ? -2 : -1)
 

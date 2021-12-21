@@ -1,38 +1,40 @@
-#ProjectCards__container {
-  width: 964px;
-  height: 510px;
-
-  margin: 8% auto;
+.container-fixed {
+  max-width: 767px;
+  height: 73vh;
+  margin: 0 auto;
 }
 
-.ProjectCards__card {
-  height: 500px;
+.stacked-cards-fanOut {
+  padding-bottom: 40px;
+}
 
-  background: linear-gradient(120deg, #4e4c4c 15%, #161616);
-  border-radius: 7px;
-  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.56);
-
+@media (max-width: 767px) {
+  .stacked-cards li {
+    height: 180px;
+  }
 }
 .stacked-cards {
-    position: relative;
+  position: relative;
 }
 .stacked-cards ul {
-    position: relative;
-    max-width: 60%;
-    margin: 0 auto;
-    padding-left: 0;
+  position: relative;
+  max-width: 60%;
+  margin: 0 auto;
+  padding-left: 0;
 }
 
 .stacked-cards li {
-    margin-top: 5px;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.56);
-    list-style: none;
-    width: 65%;
-    position: absolute;
-    left: 50%;
-    transition: 0.5s ease transform;
+  margin-top: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+  list-style: none;
+  max-width: 400px;
+  position: absolute;
+  left: 50%;
+  transition: 0.5s ease transform;
+  background: linear-gradient(120deg, #4e4c4c 15%, #161616);
+  border-radius: 7px;
+  box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.56);
 }
 
 .stacked-cards li:after {
@@ -55,6 +57,6 @@
 }
 .stacked-cards li.active {
     cursor: default;
-    box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.56);
     transition: 0.5s ease transform;
 }
+
