@@ -18,13 +18,14 @@ function ProjectCards() {
 
   return (
     <div className="container-fixed stacked-cards stacked-cards-slide">
-          <ul>
-            <li className="ProjectCards__card"></li>
-            <li className="ProjectCards__card"></li>
-            <li className="ProjectCards__card"></li>
-            <li className="ProjectCards__card"></li>
-            <li className="ProjectCards__card"></li>
+      <ul>
+        <li className="ProjectCards__card"></li>
+        <li className="ProjectCards__card"></li>
+        <li className="ProjectCards__card"></li>
+        <li className="ProjectCards__card"></li>
+        <li className="ProjectCards__card"></li>
       </ul>
+      <p>My Projects and Open Source Contributions</p>
     </div>
   )
 }

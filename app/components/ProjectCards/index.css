@@ -2,6 +2,16 @@
   max-width: 767px;
   height: 73vh;
   margin: 0 auto;
+  top: 10px;
+}
+
+.container-fixed > p {
+  position: absolute;
+  bottom: -5px;
+  font-family: Acme;
+  font-size: 3vh;
+  width: 100%;
+  text-align: center;
 }
 
 .stacked-cards-fanOut {
