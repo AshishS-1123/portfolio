@@ -3,6 +3,7 @@
   height: 73vh;
   margin: 0 auto;
   top: 10px;
+  overflow: hidden;
 }
 
 .container-fixed > p {
@@ -12,6 +13,8 @@
   font-size: 3vh;
   width: 100%;
   text-align: center;
+
+
 }
 
 .stacked-cards-fanOut {
@@ -28,9 +31,11 @@
 }
 .stacked-cards ul {
   position: relative;
-  max-width: 60%;
+  max-width: 100%;
   margin: 0 auto;
   padding-left: 0;
+
+  /* background-color: red; */
 }
 
 .stacked-cards li {

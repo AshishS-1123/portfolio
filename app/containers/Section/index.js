@@ -15,6 +15,8 @@ const styles = {
 
   borderRadius: '8px',
   boxShadow: '5px 10px 19px 0px black',
+
+  overflow: "visible",
 };
 
 export default function createSection(Component) {

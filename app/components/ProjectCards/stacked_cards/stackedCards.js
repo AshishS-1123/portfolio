@@ -50,6 +50,7 @@
             els.forEach(item => {
                 item.style.height = "60vh";
                 item.style.width = "30vw";
+                item.style.minWidth = "200px";
             });
 
             var lenAdjust = (els.length%2==0 ? -2 : -1)
