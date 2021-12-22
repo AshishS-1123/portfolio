@@ -11,7 +11,7 @@
 #ContactLinks__container > h3 {
     font-family: Acme;
     color: #e8e8e8;
-    font-size: 30px;
+    font-size: 3vw;
 }
 
 #ContactLinks__container > hr {
@@ -30,12 +30,18 @@
 #ContactLinks__container > div > p {
     font-family: Acme;
     color: #e8e8e8;
-    font-size: 24px;
+    font-size: 2.4vw;
     margin-bottom: 0;
 }
 
 #ContactLinks__container > div > a {
     font-family: KleeRegular;
     color: #e8e8e8;
-    font-size: 18px;
+    font-size: 1.5vw;
+}
+
+@media screen and (max-width: 954px) {
+  #ContactLinks__container {
+      display: none;
+  }
 }

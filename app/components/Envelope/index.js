@@ -6,7 +6,7 @@ import "./index.css"
 function Envelope() {
   return (
     <div id="Envelope__container">
-      <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="672.289" height="1010.332" viewBox="0 0 672.289 1010.332">
+      <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 672.289 1010.332">
 
         <defs>
           <filter id="Rectangle_5" x="0.889" y="241.332" width="671" height="769" filterUnits="userSpaceOnUse">
