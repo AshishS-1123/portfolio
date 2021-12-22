@@ -1,0 +1,30 @@
+.ContactBar__container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 100;
+    visibility: hidden;
+    border-radius: 15px;
+    box-shadow: 5px 10px 19px 0px black;
+    background-color: #4d4d4d;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.ContactBar__icon > img {
+    width: 8vh;
+    height: 8vh;
+    margin: 1vh;
+}
+
+@media screen and (max-width: 954px) {
+    .ContactBar__container {
+        visibility: visible;
+    }
+}
