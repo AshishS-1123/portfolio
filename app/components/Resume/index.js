@@ -4,7 +4,7 @@ import "./index.css"
 
 function Resume() {
   return (
-    <div id="Resume__container">
+    <div className="Resume__container">
       <div>
         <button>
           <img src="/download.svg" />

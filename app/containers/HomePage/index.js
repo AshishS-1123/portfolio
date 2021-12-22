@@ -12,7 +12,7 @@ export default function HomePage() {
     createSection(HeroSection),
     createSection(ProjectSection),
     createSection(ResumeSection),
-    createSection(FooterSection),
+    createSection(FooterSection, true),
   ];
 
   return (

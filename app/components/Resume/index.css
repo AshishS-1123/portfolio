@@ -1,17 +1,21 @@
-#Resume__container {
+.Resume__container {
   width: 100%;
   height: 100%;
+  padding-bottom: 40px;
 }
 
-#Resume__container > p {
+.Resume__container > p {
   font-family: Acme;
   font-size: 3vh;
   width: 100%;
   text-align: center;
-  transform: translateY(150%);
+  position: relative;
+  bottom: -10vh;
+  /* margin-bottom: 0; */
+  /* transform: translateY(7vh); */
 }
 
-#Resume__container button {
+.Resume__container button {
   max-width: 400px;
   height: 15%;
   aspect-ratio: 3 / 1;
@@ -29,7 +33,7 @@
   padding-top: 5px;
 }
 
-#Resume__container > div {
+.Resume__container > div {
   background: url('/resume.png'), black;
   opacity: 0.9;
   background-size: cover;
@@ -47,7 +51,7 @@
   transform: translate(-50%, -50%);
 }
 
-#Resume__container img {
+.Resume__container img {
   transform: translateY(calc(-50% + 2.5px));
   margin-right: 15px;
   /* margin-top: 10px; */

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const styles = {
+let styles = {
   color: 'white',
 
   backgroundImage: 'url(/section_background.jpg)',
@@ -16,13 +16,19 @@ const styles = {
   borderRadius: '8px',
   boxShadow: '5px 10px 19px 0px black',
 
-  overflow: "visible",
+  overflowX: "hidden",
+  overflowY: "visible",
 };
 
-export default function createSection(Component) {
-  function HOC () {
+export default function createSection(Component, allow_overflow = false) {
+  function HOC() {
+    // The allow_overflow decides if we should allow child components to go beyond
+    // bounds. Wrong use, but couldn't find any other solution.
+    if (allow_overflow) {
+      styles = { ...styles, overflowX: "visible" };
+    }
     return (
-      <div style={styles}>
+      <div style={{ ...styles }}>
         <Component />
       </div>
     );

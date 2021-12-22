@@ -1,5 +1,5 @@
 #Envelope__container > svg {
-  width: 125vw;
+  width: 130vw;
   max-width: 575px;
   height: auto;
 }
@@ -17,7 +17,8 @@
   #Envelope__container {
     position: relative;
     left: -50%;
-    top: 50%;
-    transform: translate(50%, -50%);
+    /* top: -40px; */
+    top: -7.5vh;
+    transform: translateX(50%);
   }
 }

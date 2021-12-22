@@ -20,7 +20,6 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
-    overflow-x: hidden;
   }
 
   body {
