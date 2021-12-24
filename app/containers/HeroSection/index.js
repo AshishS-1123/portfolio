@@ -1,7 +1,9 @@
 import React from 'react';
 
+import HeaderAnimation from 'components/HeaderAnimation';
+
 function HeroSection() {
-  return <React.Fragment>Hero Section</React.Fragment>;
+  return <HeaderAnimation />;
 }
 
 export default HeroSection;
