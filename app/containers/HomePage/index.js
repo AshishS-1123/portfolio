@@ -9,9 +9,9 @@ import ResumeSection from 'containers/ResumeSection';
 
 export default function HomePage() {
   const sections = [
-    createSection(HeroSection),
+    // createSection(HeroSection),
     // createSection(ProjectSection),
-    // createSection(ResumeSection),
+    createSection(ResumeSection),
     // createSection(FooterSection, true),
   ];
 
