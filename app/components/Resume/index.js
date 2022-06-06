@@ -7,11 +7,10 @@ function Resume() {
     <div className="Resume__container">
       <div>
         <button>
-          <img src="/download.svg" />
           Download
         </button>
       </div>
-      <p>My Official Resume</p>
+      <p>Checkout My Resume !</p>
     </div>
   )
 }

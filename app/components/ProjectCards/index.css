@@ -1,9 +1,12 @@
 .container-fixed {
-  max-width: 767px;
   height: 73vh;
   margin: 0 auto;
-  top: 10px;
+  /* top: 10px; */
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .container-fixed > p {
@@ -19,11 +22,6 @@
   padding-bottom: 40px;
 }
 
-@media (max-width: 767px) {
-  .stacked-cards li {
-    height: 180px;
-  }
-}
 .stacked-cards {
   position: relative;
 }
@@ -32,8 +30,7 @@
   max-width: 100%;
   margin: 0 auto;
   padding-left: 0;
-
-  /* background-color: red; */
+  margin-bottom: 50px;
 }
 
 .stacked-cards li {
@@ -73,3 +70,62 @@
     transition: 0.5s ease transform;
 }
 
+
+/* Content Styles */
+.ProjectCards__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  font-family: Acme;
+}
+
+.ProjectCards__card p {
+  padding: 0 30px;
+  text-align: justify;
+  font-family: 'Klee One';
+  font-size: 17px;
+}
+
+.ProjectCards__card h1 {
+  font-family: Acme;
+  margin-top: 30px;
+}
+
+.ProjectCards__card h5 {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.ProjectCards__card div {
+  display: flex;
+  flex-direction: row;
+}
+
+.ProjectCards__card a {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  background-color: #4e4c4c;
+}
+
+@media (max-width: 969px) {
+  .ProjectCards__card p {
+    font-size: 2vw;
+  }
+
+  .ProjectCards__card h1 {
+    font-size: 5vw;
+  }
+
+  .ProjectCards__card h5 {
+    font-size: 2.5vw;
+    margin-top: 5px;
+  }
+
+  .ProjectCards__card a {
+    font-size: 1.7vw;
+  }
+}

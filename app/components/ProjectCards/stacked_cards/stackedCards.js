@@ -48,8 +48,8 @@
 
             var getItemHeight = me.getHeight().max;
             els.forEach(item => {
-                item.style.height = "60vh";
-                item.style.width = "30vw";
+                // item.style.height = "55vw";
+                item.style.width = "40vw";
                 item.style.minWidth = "200px";
             });
 
@@ -129,15 +129,12 @@
             var scale = 1, translateX = 0, translateY = 0, rotateVal=0, rotate="";
             var rotateNegStart = 0// ((75 / els.length) * (oneHalf))*-1;
 
-            var transformArr = [];
-            var zIndexArr = [];
-            var relArr = [];
-
             var layout = this.config.layout;
 
             var maxCntDivisor = Math.max(prevCnt, nextCnt);
-            var prevDivisor = 100 / (maxCntDivisor);
-            var nextDivisor = 100 / (maxCntDivisor);
+            // TODO: Change 80 to 100 after adding more li tags.
+            var prevDivisor = 80 / (maxCntDivisor);
+            var nextDivisor = 80 / (maxCntDivisor);
 
             if(prevCnt>nextCnt) {
                 scale = 0 + (100 / (prevCnt+1))/100;

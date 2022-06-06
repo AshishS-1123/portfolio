@@ -17,10 +17,10 @@ import '!file-loader?name=phone.png!./icons/phone-call.png'
 import '!file-loader?name=download.svg!./images/download.svg'
 
 // Import all the fonts
-import '!file-loader?name=Acme.ttf!./fonts/Acme.ttf'
-import '!file-loader?name=Cairo.ttf!./fonts/Cairo.ttf'
-import '!file-loader?name=KleeRegular.ttf!./fonts/KleeOne-Regular.ttf'
-import '!file-loader?name=KleeBold.ttf!./fonts/KleeOne-SemiBold.ttf'
+// import '!file-loader?name=Acme.ttf!./fonts/Acme.ttf'
+// import '!file-loader?name=Cairo.ttf!./fonts/Cairo.ttf'
+// import '!file-loader?name=KleeRegular.ttf!./fonts/KleeOne-Regular.ttf'
+// import '!file-loader?name=KleeBold.ttf!./fonts/KleeOne-SemiBold.ttf'
 
 import 'file-loader?name=.htaccess!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */

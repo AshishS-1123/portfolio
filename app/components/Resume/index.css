@@ -16,9 +16,9 @@
 }
 
 .Resume__container button {
-  max-width: 400px;
-  height: 15%;
-  aspect-ratio: 3 / 1;
+  /* width: 300px;
+  max-width: 80%; */
+  height: 12%;
   background: #111;
   border: none;
   border-radius: 38.4px;
@@ -29,8 +29,8 @@
 
   color: #b9b9b9;
   font-family: Acme;
-  font-size: 4vh;
-  padding-top: 5px;
+  font-size: 3vh;
+  padding: 0 40px;
 }
 
 .Resume__container > div {
