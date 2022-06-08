@@ -2,10 +2,10 @@ import React from 'react';
 
 import createSection from 'containers/Section';
 
-import HeroSection from 'containers/HeroSection';
-import ProjectSection from 'containers/ProjectSection';
-import FooterSection from 'containers/FooterSection';
-import ResumeSection from 'containers/ResumeSection';
+import HeroSection from 'containers/HeroSection/Loadable';
+import ProjectSection from 'containers/ProjectSection/Loadable';
+import FooterSection from 'containers/FooterSection/Loadable';
+import ResumeSection from 'containers/ResumeSection/Loadable';
 
 export default function HomePage() {
   const sections = [

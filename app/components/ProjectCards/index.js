@@ -1,6 +1,4 @@
 import React, { memo, useEffect } from 'react';
-// import PropTypes from 'prop-types'
-
 import stackedCards from './stacked_cards/stackedCards';
 
 import './index.css';
@@ -54,37 +52,30 @@ function ProjectCards() {
   }, [])
 
   return (
-    <div className="container-fixed stacked-cards stacked-cards-slide">
-      <ul>
-        {
-          projectList.map(item => {
-            return (
-              <li key={item.id} className="ProjectCards__card">
-                <h1>{item.name}</h1>
-                <h5>{item.tagline}</h5>
+    <>
+      <p id="project_title">My Projects and Open Source Contributions</p>
+      <div className="container-fixed stacked-cards stacked-cards-slide">
+        <ul>
+          {
+            projectList.map(item => {
+              return (
+                <li key={item.id} className="ProjectCards__card">
+                  <h1>{item.name}</h1>
+                  <h5>{item.tagline}</h5>
 
-                <p>{item.desc}</p>
-                <div>
-                  <a href={item.github} target="_blank">GitHub</a>
-                  <a href={item.live} target="_blank">Go Live</a>
-                </div>
-              </li>
-            );
-          })
-        }
-      </ul>
-      <p>My Projects and Open Source Contributions</p>
-    </div>
+                  <p>{item.desc}</p>
+                  <div>
+                    <a href={item.github} target="_blank">GitHub</a>
+                    <a href={item.live} target="_blank">Go Live</a>
+                  </div>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
+    </>
   )
 }
 
 export default memo(ProjectCards);
-
-/*
-Projects
-
-1. Akira
-2. Chat App
-3. MERN stack authentiction
-4. Clone
-*/

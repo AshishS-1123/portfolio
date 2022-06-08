@@ -1,5 +1,4 @@
 import React from 'react';
-// import PropTypes from 'prop-types'
 
 import ContactLinks from 'components/ContactLinks/Loadable';
 import Envelope from 'components/Envelope/Loadable';

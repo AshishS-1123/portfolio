@@ -1,17 +1,16 @@
+
 .container-fixed {
-  height: 73vh;
-  margin: 0 auto;
-  /* top: 10px; */
+  height: 68vh;
   overflow: hidden;
+  /* background-color: red; */
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-.container-fixed > p {
-  position: absolute;
-  bottom: -5px;
+#project_title {
   font-family: Acme;
   font-size: 3vh;
   width: 100%;
@@ -30,7 +29,7 @@
   max-width: 100%;
   margin: 0 auto;
   padding-left: 0;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .stacked-cards li {
@@ -94,7 +93,7 @@
 
 .ProjectCards__card h5 {
   margin-top: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .ProjectCards__card div {
@@ -113,19 +112,19 @@
 
 @media (max-width: 969px) {
   .ProjectCards__card p {
-    font-size: 2vw;
+    font-size: 1.7vw;
   }
 
   .ProjectCards__card h1 {
-    font-size: 5vw;
+    font-size: 3vw;
   }
 
   .ProjectCards__card h5 {
-    font-size: 2.5vw;
+    font-size: 2.0vw;
     margin-top: 5px;
   }
 
   .ProjectCards__card a {
-    font-size: 1.7vw;
+    font-size: 1.4vw;
   }
 }

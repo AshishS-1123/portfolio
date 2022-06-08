@@ -1,5 +1,4 @@
-import React, { memo } from 'react';
-// import PropTypes from 'prop-types'
+import React from 'react';
 
 import ProjectCards from 'components/ProjectCards/Loadable';
 
@@ -11,6 +10,4 @@ export function ProjectSection() {
   );
 }
 
-ProjectSection.propTypes = {};
-
-export default memo(ProjectSection);
+export default ProjectSection;
