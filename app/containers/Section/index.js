@@ -10,6 +10,7 @@ let styles = {
   width: '100%',
   height: '76.7592vh',
   maxWidth: '1441px',
+  minHeight: '720px',
 
   margin: '11.6204vh auto 13.6204vh auto',
 

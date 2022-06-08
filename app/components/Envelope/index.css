@@ -15,10 +15,17 @@
 
 @media screen and (max-width: 954px) {
   #Envelope__container {
-    position: relative;
+    visibility: hidden;
+    /* position: relative;
     left: -50%;
-    /* top: -40px; */
+    top: -40px;
     top: -7.5vh;
-    transform: translateX(50%);
+    transform: translateX(50%); */
   }
 }
+
+/* @media screen and (min-width: 480px) {
+  #ContactForm__form {
+    visibility: hidden;
+  }
+} */
