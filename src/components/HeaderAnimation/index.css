@@ -1,0 +1,154 @@
+#HeaderAnimation__container {
+  width: 550px;
+  height: 550px;
+
+  position: relative;
+  left: 50%; top: 45%;
+  transform: translate(-50%, -50%);
+
+  align-items: center;
+}
+
+#HeaderAnimation_svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 110%;
+  height: 110%;
+  /* height: 99.77vh; */
+
+  object-fit: cover;
+  object-position: bottom;
+
+  overflow: hidden;
+}
+
+#HeaderAnimation_svg svg {
+  animation: arcAnimation 4s;
+  animation-iteration-count: infinite;
+  transform-origin: center;
+  animation-timing-function: ease-in-out;
+}
+
+#HeaderAnimation__text {
+  width: 422px;
+  color: #eee;
+
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  line-height: normal !important;
+
+  text-transform: capitalize;
+  font-family: 'Klee One';
+}
+
+#HeaderAnimation__text hr {
+  max-width: 20vw;
+  margin: 0 auto;
+}
+
+#HeaderAnimation__smalltext {
+  font-size: 30.2px;
+  color: #a9a9a9;
+}
+
+#HeaderAnimation__mediumtext {
+  font-size: 45.35px;
+  text-transform: uppercase;
+  line-height: 0.8 !important;
+  color: #a9a9a9;
+}
+
+#HeaderAnimation__largetext::after {
+  font-family: Acme;
+  font-size: 81.7px;
+  content: "Front End";
+
+  animation: largeTextAnimation_text 8s, largeTextAnimation_opacity 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes largeTextAnimation_text {
+  0% {
+    content: "Front End";
+  }
+
+  25% {
+    content: "MERN Stack";
+  }
+
+  50% {
+    content: "Open Source";
+  }
+
+  75% {
+    content: "React JS";
+  }
+
+  100% {
+    content: "Front End";
+  }
+}
+
+@keyframes largeTextAnimation_opacity {
+  0% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+
+  35.1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes arcAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(270deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 715px) {
+  #HeaderAnimation_svg {
+    width: 105vw;
+    height: 105vw;
+  }
+
+  #HeaderAnimation__container {
+    width: 95%;
+    height: 95%;
+  }
+  #HeaderAnimation__largetext::after {
+    font-size: 12.0613vw;
+  }
+  #HeaderAnimation__mediumtext {
+    font-size: 8.0133vw;
+  }
+  #HeaderAnimation__smalltext {
+    font-size: 5vw;
+  }
+  
+}
+
+/* @media only screen and (max-width: 1360px) {
+  #HeaderAnimation_svg svg {
+    visibility: hidden;
+  }
+} */
