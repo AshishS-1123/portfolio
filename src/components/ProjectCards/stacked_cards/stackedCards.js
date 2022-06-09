@@ -300,7 +300,8 @@
             touchsurface.addEventListener('touchstart', function(e){
                 var touchobj = e.changedTouches[0]
                 swipedir = 'none'
-                dist = 0
+                distX = 0
+                distY = 0
                 startX = touchobj.pageX
                 startY = touchobj.pageY
                 startTime = new Date().getTime()
@@ -329,9 +330,10 @@
 
         }
 
+        window.stackedCards = stackedCards;
         return stackedCards;
 
     })();
 }).call(this);
 
-export default stackedCards
+export default window.stackedCards
